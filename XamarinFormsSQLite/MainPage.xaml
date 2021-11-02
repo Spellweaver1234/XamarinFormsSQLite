@@ -1,0 +1,30 @@
+﻿<ContentPage
+    x:Class="XamarinFormsSQLite.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout>
+        <ListView
+            x:Name="friendsList"
+            ItemSelected="OnItemSelected"
+            ItemsSource="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label
+                                    FontSize="Medium"
+                                    Text="{Binding Name}" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button
+            Clicked="CreateFriend"
+            Text="Добавить" />
+    </StackLayout>
+
+</ContentPage>

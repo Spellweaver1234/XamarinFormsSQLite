@@ -1,0 +1,25 @@
+﻿<ContentPage
+    x:Class="XamarinFormsSQLite.FriendPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout>
+        <Label Text="Имя" />
+        <Entry Text="{Binding Name}" />
+        <Label Text="Email" />
+        <Entry Text="{Binding Email}" />
+        <Label Text="Телефон" />
+        <Entry Text="{Binding Phone}" />
+        <StackLayout Orientation="Horizontal">
+            <Button
+                Clicked="SaveFriend"
+                Text="Сохранить" />
+            <Button
+                Clicked="DeleteFriend"
+                Text="Удалить" />
+            <Button
+                Clicked="Cancel"
+                Text="Отмена" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
